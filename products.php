@@ -113,6 +113,7 @@ require 'product-model.php';
       </div>
     </nav>
     <div class="container mt-5">
+      <?php echo $_REQUEST['message'] ?? ''; ?>
       <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
           <div class="tm-bg-primary-dark tm-block tm-block-products">
@@ -177,7 +178,12 @@ require 'product-model.php';
                   <tr>
                     <td class="tm-product-name"><?php echo $category['name'] ?></td>
                     <td class="text-center">
-                      <a href="delete-category.php?id=<?=$category['id']?>" class="tm-product-delete-link">
+                      <a href="category-controller.php?method=edit&id= <?= $category['id'] ?> " class="tm-product-delete-link">
+                        <i class="far fa-edit tm-product-edit-icon"></i>
+                      </a>
+                    </td>
+                    <td class="text-center">
+                      <a href="category-controller.php?method=delete&id= <?= $category['id'] ?> " class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
                     </td>
@@ -189,7 +195,7 @@ require 'product-model.php';
               </table>
             </div>
             <!-- table container -->
-            <a href="add-category.php" class="btn btn-primary btn-block text-uppercase mb-3">
+            <a href="category-controller.php" class="btn btn-primary btn-block text-uppercase mb-3">
               Add new category
             </a>
           </div>
@@ -211,11 +217,11 @@ require 'product-model.php';
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script>
-      $(function() {
-        $(".tm-product-name").on("click", function() {
-          window.location.href = "edit-product.php";
-        });
-      });
+      // $(function() {
+      //   $(".tm-product-name").on("click", function() {
+      //     window.location.href = "edit-product.php";
+      //   });
+      // });
     </script>
   </body>
 </html>

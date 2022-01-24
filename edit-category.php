@@ -126,11 +126,13 @@
                       for="name"
                       >Name
                     </label>
-                    <input type="text" name="method" value="store" hidden>
+                    <input type="text" name="method" value="update" hidden>
+                    <input type="text" name="id" value="<?= $category['id'] ?>" hidden>
                     <input
                       id="name"
                       name="name"
                       type="text"
+                      value="<?= $category['name'] ?>"
                       class="form-control validate"
                       required
                     />

@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "root", "product-admin");
+$conn = mysqli_connect("localhost", "root", "", "product_admin");
 
 // Check connection
 if (!$conn) {

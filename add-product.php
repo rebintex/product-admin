@@ -1,6 +1,7 @@
 <?php 
 // require 'add-category.php';
 require 'category-model.php';
+require 'product-model.php';
 
 ?>
 
@@ -126,8 +127,9 @@ require 'category-model.php';
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="store.product.php" method="POST" class="tm-edit-product-form">
+                <form action="product-controller.php" method="POST" class="tm-edit-product-form">
                   <div class="form-group mb-3">
+                  <input type="text" name="method" value="store" hidden>
                     <label
                       for="name"
                       >Product Name

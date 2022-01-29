@@ -120,17 +120,32 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="" method="post" class="tm-edit-product-form">
+                <form action="product-controller.php" method="post" class="tm-edit-product-form">
                   <div class="form-group mb-3">
                     <label
                       for="name"
                       >Product Name
                     </label>
+                    <input type="text" name="method" value="update" hidden>
+                    <input type="text" name="id" value="<? echo $product['id'] ?>" hidden>
                     <input
                       id="name"
                       name="name"
                       type="text"
-                      value="Lorem Ipsum Product"
+                      value="<?php echo $product['name']; ?>"
+                      class="form-control validate"
+                    />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label
+                      for="price"
+                      >Price
+                    </label>
+                    <input
+                      id="price"
+                      name="price"
+                      type="text"
+                      value="<?php echo $product['price']; ?>"
                       class="form-control validate"
                     />
                   </div>
@@ -154,10 +169,17 @@
                       class="custom-select tm-select-accounts"
                       id="category"
                     >
-                      <option>Select category</option>
+                    <?php 
+                    require 'category-model.php';
+                    foreach(getAllCategories() as $category)  : ?>
+
+                    <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+
+                    <?php endforeach; ?>
+                      <!-- <option>Select category</option>
                       <option value="1" selected>New Arrival</option>
                       <option value="2">Most Popular</option>
-                      <option value="3">Trending</option>
+                      <option value="3">Trending</option> -->
                     </select>
                   </div>
                   <div class="row">

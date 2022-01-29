@@ -1,6 +1,7 @@
 <?php  
 require 'category-model.php';
 require 'product-model.php';
+// require 'product-controller.php';
 
 
 ?>
@@ -138,12 +139,12 @@ require 'product-model.php';
                     <td><?php echo $product['price']; ?></td>
                     <td><?php echo $product['category']; ?></td>
                     <td>
-                      <a href="delete-product.php?edit=<?=$product['id']?>" class="tm-product-delete-link">
+                      <a href="product-controller.php?method=edit&id=<?=$product['id']?>" class="tm-product-delete-link">
                         <i class="far fa-edit tm-product-edit-icon"></i>
                       </a>
                     </td>
                     <td>
-                      <a href="delete-product.php?id=<?=$product['id']?>" class="tm-product-delete-link">
+                      <a href="product-controller.php?method=delete&id=<?=$product['id']?>" class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
                     </td>

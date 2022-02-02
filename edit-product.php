@@ -168,6 +168,7 @@
                     <select
                       class="custom-select tm-select-accounts"
                       id="category"
+                      name="category_id"
                     >
                     <?php 
                     require 'category-model.php';

@@ -1,5 +1,6 @@
 <?php 
 require 'product-model.php';
+require 'Models/Product.php';
 
 switch ($_REQUEST['method']) {
     case 'create':
@@ -32,7 +33,7 @@ function storeP() {
         $price = $data['price'];
         $category_id = $data['category_id'];
         
-        if(createProduct($name, $price, $category_id)) {
+        if(Product::create($name, $price, $category_id)) {
                 header("location: products.php");
                 exit();
         } else {

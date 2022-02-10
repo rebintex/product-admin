@@ -1,9 +1,15 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "root", "product-admin");
+$username = "root";
+$password = "root";
 
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+try {
+$conn = new PDO("mysql:host=localhost;dbname=product-admin", $username, $password);
+} 
+catch (PDOException $e) {
+  echo "Error! - " . $e->getMessage();
+  die();
 }
+
+
 

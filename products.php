@@ -179,7 +179,7 @@ require 'product-model.php';
                   <tr>
                     <td class="tm-product-name"><?php echo $category['name'] ?></td>
                     <td class="text-center">
-                      <a href="category-controller.php?method=edit&id= <?= $category['id'] ?> " class="tm-product-delete-link">
+                      <a href="category-controller.php?method=edit&id=<?= $category['id'] ?> " class="tm-product-delete-link">
                         <i class="far fa-edit tm-product-edit-icon"></i>
                       </a>
                     </td>

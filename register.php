@@ -109,7 +109,7 @@
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
             <div class="row">
               <div class="col-12 text-center">
-                <h2 class="tm-block-title mb-4">Welcome to Dashboard, Login</h2>
+                <h2 class="tm-block-title mb-4">Welcome to Registration</h2>
               </div>
             </div>
             <div class="row mt-2">
@@ -126,6 +126,17 @@
                       required
                     />
                   </div>
+                  <div class="form-group">
+                    <label for="username">Email</label>
+                    <input
+                      name="email"
+                      type="email"
+                      class="form-control validate"
+                      id="email"
+                      value=""
+                      required
+                    />
+                  </div>
                   <div class="form-group mt-3">
                     <label for="password">Password</label>
                     <input
@@ -137,16 +148,13 @@
                       required
                     />
                   </div>
-                  <div class="form-group mt-4">
-                    <input
-                      type="submit"
-                      value="Login"
-                      name="login"
-                      class="btn btn-primary btn-block text-uppercase"
-                    >
-                  </div>
-                  <a class="mt-5 btn btn-primary btn-block text-uppercase" href="register.php">
+                  <a class="mt-5 btn btn-primary btn-block text-uppercase">
                     Register
+                  </a>
+                  <hr>
+                  <div class="mt-3">If you have an account, please login</div>
+                  <a class="mt-5 btn btn-primary btn-block text-uppercase" href="index.php" >
+                    Login
                   </a>
                 </form>
               </div>

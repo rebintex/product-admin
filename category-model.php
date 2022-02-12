@@ -38,7 +38,7 @@ function updateCategory($id, $name) {
     require 'database.php';
     //return mysqli_query($conn, "UPDATE `categories` SET `name` = '$name' WHERE `categories`.`id` = '$id';");
     $statement = $conn->prepare("UPDATE `categories` SET name = :name WHERE categories.id = :id;");
-    return $statement->execute(['name' => $name, 'id' => $id]); 
+    return $statement->execute([':name' => $name, ':id' => $id]); 
 }
 
 function deleteCategory($id) {

@@ -26,4 +26,3 @@ if(($_POST)) {
     $conn = null;
 
 }
-?>

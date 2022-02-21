@@ -1,3 +1,37 @@
+<?php
+require "database.php";
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    function data_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $username = data_input($_POST['username']);
+    $email = data_input($_POST['email']);
+    $password = data_input($_POST['password']);
+
+
+
+    $statement = $conn->prepare("INSERT INTO `users` (username, email, password) 
+                                VALUES (:username, :email, :password)");
+    $users = $statement->execute([
+        'username' => $username, 'email' => $email, 'password' => $password
+    ]);
+    if($users) {
+        //echo "Success in registring";
+        header("location: products.php");
+    } else {
+        echo "Wrong";
+        header("location: register.php");
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,86 +56,6 @@
   </head>
 
   <body>
-    <!-- <div>
-      <nav class="navbar navbar-expand-xl">
-        <div class="container h-100">
-          <a class="navbar-brand" href="index.php">
-            <h1 class="tm-site-title mb-0">Product Admin</h1>
-          </a>
-          <button
-            class="navbar-toggler ml-auto mr-0"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars tm-nav-icon"></i>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto h-100">
-              <li class="nav-item">
-                <a class="nav-link" href="index.php">
-                  <i class="fas fa-tachometer-alt"></i> Dashboard
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="far fa-file-alt"></i>
-                  <span> Reports <i class="fas fa-angle-down"></i> </span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Daily Report</a>
-                  <a class="dropdown-item" href="#">Weekly Report</a>
-                  <a class="dropdown-item" href="#">Yearly Report</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.php">
-                  <i class="fas fa-shopping-cart"></i> Products
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="accounts.php">
-                  <i class="far fa-user"></i> Accounts
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-cog"></i>
-                  <span> Settings <i class="fas fa-angle-down"></i> </span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Billing</a>
-                  <a class="dropdown-item" href="#">Customize</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div> -->
 
     <div class="container tm-mt-big tm-mb-big">
       <div class="row">
@@ -114,7 +68,7 @@
             </div>
             <div class="row mt-2">
               <div class="col-12">
-                <form action="login-a.php" method="post" class="tm-login-form">
+                <form action="register.php" method="post" class="tm-login-form">
                   <div class="form-group">
                     <label for="username">Username</label>
                     <input
@@ -148,9 +102,9 @@
                       required
                     />
                   </div>
-                  <a class="mt-5 btn btn-primary btn-block text-uppercase">
+                  <button type="submit" name="submit" class="mt-5 btn btn-primary btn-block text-uppercase">
                     Register
-                  </a>
+                  </button>
                   <hr>
                   <div class="mt-3">If you have an account, please login</div>
                   <a class="mt-5 btn btn-primary btn-block text-uppercase" href="index.php" >

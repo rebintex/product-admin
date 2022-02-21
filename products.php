@@ -2,6 +2,7 @@
 session_start();  
 require 'category-model.php';
 require 'product-model.php';
+
 // require 'product-controller.php';
 
 
@@ -64,7 +65,7 @@ require 'product-model.php';
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-               <a class="nav-link d-block" href="accounts.php">
+               <a class="nav-link d-block" href="accounts.php?id=<?= $users['id']; ?>">
                  User: 
                 <b> <?php echo $_SESSION['username']; ?></b>
               </a>
@@ -87,7 +88,7 @@ require 'product-model.php';
               <table class="table table-hover tm-table-small tm-product-table">
                 <thead>
                   <tr>
-                    <th scope="col">&nbsp;</th>
+                    <th scope="col">PRODUCT ID</th>
                     <th scope="col">PRODUCT NAME</th>
                     <th scope="col">PRICE</th>
                     <th scope="col">CATEGORY</th>
@@ -99,7 +100,7 @@ require 'product-model.php';
                   <?php 
                     foreach(getAllProducts() as $product) : ?>
                   <tr>
-                    <th scope="row"><input type="checkbox" /></th>
+                    <th scope="row"><?=$product['id']?></th>
                     <td class="tm-product-name"><?php echo $product['name']; ?></td>
                     <td><?php echo $product['price']; ?></td>
                     <td><?php echo $product['category']; ?></td>
@@ -121,12 +122,9 @@ require 'product-model.php';
               </table>
             </div>
             <!-- table container -->
-            <a
-              href="add-product.php"
-              class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
-            <button class="btn btn-primary btn-block text-uppercase">
-              Delete selected products
-            </button>
+            <a href="add-product.php"
+              class="btn btn-primary btn-block text-uppercase mb-3">
+                Add new product</a>
           </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
@@ -161,7 +159,7 @@ require 'product-model.php';
               </table>
             </div>
             <!-- table container -->
-            <a href="category-controller.php" class="btn btn-primary btn-block text-uppercase mb-3">
+            <a href="add-category.php" class="btn btn-primary btn-block text-uppercase mb-3">
               Add new category
             </a>
           </div>

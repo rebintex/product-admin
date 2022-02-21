@@ -10,6 +10,6 @@ catch (PDOException $e) {
   echo "Error! - " . $e->getMessage();
   die();
 }
-
+return $conn;
 
 

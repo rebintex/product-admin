@@ -504,8 +504,8 @@ input[type="checkbox"]:focus {
   border-radius: 0;
 }
 .tm-product-img-dummy {
-  max-width: 100%;
-  height: 240px;
+  max-width: 85%;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;

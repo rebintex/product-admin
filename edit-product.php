@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,31 +45,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto h-100">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">
-                <i class="fas fa-tachometer-alt"></i> Dashboard
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="far fa-file-alt"></i>
-                <span> Reports <i class="fas fa-angle-down"></i> </span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Daily Report</a>
-                <a class="dropdown-item" href="#">Weekly Report</a>
-                <a class="dropdown-item" href="#">Yearly Report</a>
-              </div>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link active" href="products.php">
                 <i class="fas fa-shopping-cart"></i> Products
@@ -79,27 +57,14 @@
                 <i class="far fa-user"></i> Accounts
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fas fa-cog"></i>
-                <span> Settings <i class="fas fa-angle-down"></i> </span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Billing</a>
-                <a class="dropdown-item" href="#">Customize</a>
-              </div>
-            </li>
           </ul>
           <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link d-block" href="accounts.php?id=<?= $users['id']; ?>">
+                      User:
+                      <b> <?php echo $_SESSION['username']; ?></b>
+                  </a>
+              </li>
             <li class="nav-item">
               <a class="nav-link d-block" href="login.php">
                 Admin, <b>Logout</b>
@@ -149,17 +114,7 @@
                       class="form-control validate"
                     />
                   </div>
-                  <div class="form-group mb-3">
-                    <label
-                      for="description"
-                      >Description</label
-                    >
-                    <textarea                    
-                      class="form-control validate tm-small"
-                      rows="5"
-                      required
-                    >Lorem ipsum dolor amet gentrify glossier locavore messenger bag chillwave hashtag irony migas wolf kale chips small batch kogi direct trade shaman.</textarea>
-                  </div>
+
                   <div class="form-group mb-3">
                     <label
                       for="category"
@@ -182,35 +137,6 @@
                       <option value="2">Most Popular</option>
                       <option value="3">Trending</option> -->
                     </select>
-                  </div>
-                  <div class="row">
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="expire_date"
-                            >Expire Date
-                          </label>
-                          <input
-                            id="expire_date"
-                            name="expire_date"
-                            type="text"
-                            value="22 Oct, 2020"
-                            class="form-control validate"
-                            data-large-mode="true"
-                          />
-                        </div>
-                        <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="stock"
-                            >Units In Stock
-                          </label>
-                          <input
-                            id="stock"
-                            name="stock"
-                            type="text"
-                            value="19,765"
-                            class="form-control validate"
-                          />
-                        </div>
                   </div>
                   
               </div>

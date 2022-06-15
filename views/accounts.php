@@ -13,11 +13,11 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
     />
     <!-- https://fonts.google.com/specimen/Roboto -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../public/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="../public/css/templatemo-style.css">
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -28,7 +28,7 @@
     <div class="" id="home">
       <nav class="navbar navbar-expand-xl">
         <div class="container h-100">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="../public/index.php">
             <h1 class="tm-site-title mb-0">Product Admin</h1>
           </a>
           <button
@@ -46,26 +46,26 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto h-100">
               <li class="nav-item">
-                <a class="nav-link" href="products.php">
+                <a class="nav-link" href="../views/products.php">
                   <i class="fas fa-shopping-cart"></i> Products
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="accounts.php">
+                <a class="nav-link active" href="../views/accounts.php">
                   <i class="far fa-user"></i> Accounts
                 </a>
               </li>
             </ul>
             <ul class="navbar-nav">
             <li class="nav-item">
-               <a class="nav-link d-block" href="accounts.php">
+               <a class="nav-link d-block" href="../views/accounts.php">
                  User: 
                 <b> <?php echo $_SESSION['username']; ?></b>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-block" href="index.php">
+              <a class="nav-link d-block" href="../public/index.php">
                 <b>Logout</b>
               </a>
             </li>
@@ -81,7 +81,7 @@
               <h2 class="tm-block-title">Change Avatar</h2>
               <div class="tm-avatar-container">
                 <img
-                  src="img/avatar.png"
+                  src="../public/img/avatar.png"
                   alt="Avatar"
                   class="tm-avatar img-fluid mb-4"
                 />
@@ -176,9 +176,9 @@
       </footer>
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="../public/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
   </body>
 </html>

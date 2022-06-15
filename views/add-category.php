@@ -12,13 +12,13 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
     />
     <!-- https://fonts.google.com/specimen/Roboto -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../public/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="jquery-ui-datepicker/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="../public/jquery-ui-datepicker/jquery-ui.min.css" type="text/css" />
     <!-- http://api.jqueryui.com/datepicker/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="../public/css/templatemo-style.css">
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -28,7 +28,7 @@
   <body>
     <nav class="navbar navbar-expand-xl">
       <div class="container h-100">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="../public/index.php">
           <h1 class="tm-site-title mb-0">Product Admin</h1>
         </a>
         <button
@@ -45,7 +45,6 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto h-100">
-
 
             <li class="nav-item">
               <a class="nav-link active" href="products.php">
@@ -86,19 +85,17 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="category-controller.php" method="POST" class="tm-edit-product-form">
+                <form action="../controllers/category-controller.php" method="POST" class="tm-edit-product-form">
                   <div class="form-group mb-3">
                     <label
                       for="name"
                       >Name
                     </label>
-                    <input type="text" name="method" value="update" hidden>
-                    <input type="text" name="id" value="<?= $category['id'] ?>" hidden>
+                    <input type="text" name="method" value="store" hidden>
                     <input
                       id="name"
                       name="name"
                       type="text"
-                      value="<?= $category['name'] ?>"
                       class="form-control validate"
                       required
                     />
@@ -122,11 +119,11 @@
         </div>
     </footer> 
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="../public/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="jquery-ui-datepicker/jquery-ui.min.js"></script>
+    <script src="../public/jquery-ui-datepicker/jquery-ui.min.js"></script>
     <!-- https://jqueryui.com/download/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script>
       $(function() {

@@ -3,7 +3,7 @@
 
 
 if(($_POST)) {
-    require 'database.php';
+    require '../config/database.php';
     
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -14,7 +14,7 @@ if(($_POST)) {
     if($data > 0) {
         session_start();
         $_SESSION['username'] = $username;
-        header('Location: products.php');
+        header('Location: ../views/products.php');
         echo "Success!";
 
     }

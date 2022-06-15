@@ -2,17 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78aa6d9d-d0e4-41af-9949-22e60cf85b02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/add-category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/add-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/templatemo-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/templatemo-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit-category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-a.php" beforeDir="false" afterPath="$PROJECT_DIR$/login-a.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/accounts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add-category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/category-controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/category-model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/fontawesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/templatemo-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/templatemo-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit-category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/arrow-down.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/arrow-down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/check-mark.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/check-mark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/notification-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/notification-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/notification-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/notification-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/notification-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/notification-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/product-image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/AUTHORS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/AUTHORS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/external/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.structure.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.structure.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.structure.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.structure.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/jquery-ui.theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/jquery-ui.theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui-datepicker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-datepicker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Chart.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/moment.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/moment.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tooplate-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/tooplate-scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login-a.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login-a.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/product-controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/product-model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/webfonts/fa-solid-900.woff2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +85,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="25JeBdxHWUkbvLoHtCiQsRcF997" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,8 +105,19 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\OpenServer\domains\product-admin\controllers" />
+      <recent name="F:\OpenServer\domains\product-admin\models" />
+      <recent name="F:\OpenServer\domains\product-admin\views" />
+      <recent name="F:\OpenServer\domains\product-admin\config" />
+      <recent name="F:\OpenServer\domains\product-admin\public" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,10 +130,26 @@
       <workItem from="1645249482879" duration="5962000" />
       <workItem from="1645272328380" duration="350000" />
       <workItem from="1645277522343" duration="3880000" />
+      <workItem from="1653661625380" duration="1138000" />
+      <workItem from="1654090542482" duration="606000" />
+      <workItem from="1655282227099" duration="645000" />
+      <workItem from="1655298443113" duration="6967000" />
+      <workItem from="1655312309111" duration="1407000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,5 +1,5 @@
 <?php 
-require 'product-model.php';
+require '../models/product-model.php';
 
 switch ($_REQUEST['method']) {
     case 'create':
@@ -20,7 +20,7 @@ switch ($_REQUEST['method']) {
 }
 
 function createP() {
-    header('Location: add-product.php');
+    header('Location: ../views/add-product.php');
     exit();
 
 }
@@ -33,10 +33,10 @@ function storeP() {
         $category_id = $data['category_id'];
         
         if(createProduct($name, $price, $category_id)) {
-                header("location: products.php");
+                header("location: ../views/products.php");
                 exit();
         } else {
-            header("location: products.php?message=Product is not added!");
+            header("location: ../views/products.php?message=Product is not added!");
                 // echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
         } 
@@ -46,10 +46,10 @@ function deleteP() {
     if ($id = $_REQUEST['id']) {
         $result = deleteProduct($id);
         if (!$result) {
-            header('Location: '. '/products.php?message=Error while deleting product.');
+            header('Location: '. '../views/products.php?message=Error while deleting product.');
             exit();
         }
-        header('Location: '. '/products.php?message=Product deleted');
+        header('Location: '. '../views/products.php?message=Product deleted');
         exit();
     }
 }
@@ -57,7 +57,7 @@ function deleteP() {
 function editP() {
     if($id = $_REQUEST['id']) {
         if($product = getProduct($id)) {
-            require 'edit-product.php';
+            require '../views/edit-product.php';
             exit();
         }
     // header('Location: edit-product.php');
@@ -68,17 +68,17 @@ function editP() {
 function updateP() {
     if (($id = $_POST['id']) && ($name = $_POST['name']) && ($price = $_POST['price']) && ($category_id = $_POST['category_id'])) {
         if (!getProduct($id)) {
-            header('Location: ' . '/products.php?message=Product does not exist.');
+            header('Location: ' . '../views/products.php?message=Product does not exist.');
             exit();
         }
         $result = updateProduct($name, $price, $category_id, $id);
         if (!$result) {
-            header('Location: ' . '/products.php?message=Error while updating product.');
+            header('Location: ' . '../views/products.php?message=Error while updating product.');
             exit();
         }
-        header('Location: ' . '/products.php?message=Product is updated');
+        header('Location: ' . '../views/products.php?message=Product is updated');
         exit();
     }
-    header('Location: ' . '/products.php?message=Product id is not given');
+    header('Location: ' . '../views/products.php?message=Product id is not given');
     exit();
 }

@@ -1,5 +1,5 @@
 <?php
-require "database.php";
+require "../config/database.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     function data_input($data) {
@@ -44,11 +44,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
     />
     <!-- https://fonts.google.com/specimen/Open+Sans -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../public/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="../public/css/templatemo-style.css">
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                   </button>
                   <hr>
                   <div class="mt-3">If you have an account, please login</div>
-                  <a class="mt-5 btn btn-primary btn-block text-uppercase" href="index.php" >
+                  <a class="mt-5 btn btn-primary btn-block text-uppercase" href="../public/index.php" >
                     Login
                   </a>
                 </form>
@@ -126,9 +126,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
       </div>
     </footer>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="../public/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
   </body>
 </html>

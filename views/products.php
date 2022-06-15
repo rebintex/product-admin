@@ -1,7 +1,8 @@
 <?php
 session_start();  
-require 'category-model.php';
-require 'product-model.php';
+require '../models/category-model.php';
+require '../models/product-model.php';
+
 
 // require 'product-controller.php';
 
@@ -20,11 +21,11 @@ require 'product-model.php';
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
     />
     <!-- https://fonts.google.com/specimen/Roboto -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../public/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="../public/css/templatemo-style.css">
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -34,7 +35,7 @@ require 'product-model.php';
   <body id="reportsPage">
     <nav class="navbar navbar-expand-xl">
       <div class="container h-100">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="../public/index.php">
           <h1 class="tm-site-title mb-0">Product Admin</h1>
         </a>
         <button
@@ -71,7 +72,7 @@ require 'product-model.php';
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-block" href="index.php">
+              <a class="nav-link d-block" href="../public/index.php">
                 <b>Logout</b>
               </a>
             </li>
@@ -105,12 +106,12 @@ require 'product-model.php';
                     <td><?php echo $product['price']; ?></td>
                     <td><?php echo $product['category']; ?></td>
                     <td>
-                      <a href="product-controller.php?method=edit&id=<?=$product['id']?>" class="tm-product-delete-link">
+                      <a href="../controllers/product-controller.php?method=edit&id=<?=$product['id']?>" class="tm-product-delete-link">
                         <i class="far fa-edit tm-product-edit-icon"></i>
                       </a>
                     </td>
                     <td>
-                      <a href="product-controller.php?method=delete&id=<?=$product['id']?>" class="tm-product-delete-link">
+                      <a href="../controllers/product-controller.php?method=delete&id=<?=$product['id']?>" class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
                     </td>
@@ -142,12 +143,12 @@ require 'product-model.php';
                   <tr>
                     <td class="tm-product-name"><?php echo $category['name'] ?></td>
                     <td class="text-center">
-                      <a href="category-controller.php?method=edit&id=<?= $category['id'] ?> " class="tm-product-delete-link">
+                      <a href="../controllers/category-controller.php?method=edit&id=<?= $category['id'] ?> " class="tm-product-delete-link">
                         <i class="far fa-edit tm-product-edit-icon"></i>
                       </a>
                     </td>
                     <td class="text-center">
-                      <a href="category-controller.php?method=delete&id= <?= $category['id'] ?> " class="tm-product-delete-link">
+                      <a href="../controllers/category-controller.php?method=delete&id= <?= $category['id'] ?> " class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
                     </td>
@@ -176,9 +177,9 @@ require 'product-model.php';
       </div>
     </footer>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="../public/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script>
       // $(function() {

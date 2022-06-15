@@ -1,9 +1,9 @@
 <?php
 
-require_once 'logger.php';
+require_once '../logger.php';
 
 function getAllCategories() {
-    require 'database.php';
+    require '../config/database.php';
 //     $result = mysqli_query($conn, "SELECT * FROM `categories`");
 //     return mysqli_fetch_all($result, MYSQLI_ASSOC);
     $statement = $conn->prepare("SELECT * FROM `categories`");
@@ -13,7 +13,7 @@ function getAllCategories() {
 }
 
 function getCategory($id) {
-    require 'database.php';
+    require '../config/database.php';
     // $result = mysqli_query($conn, "SELECT * FROM `categories` WHERE `id` = '$id' LIMIT 1");
     // return mysqli_fetch_assoc($result);
     $statement = $conn->prepare("SELECT * FROM categories WHERE id = :id LIMIT 1");
@@ -22,7 +22,7 @@ function getCategory($id) {
 }
 
 function createCategory ($name) {
-    require "database.php";
+    require "../config/database.php";
     $sql = "INSERT INTO `categories` (name) VALUES (:name)";
     $statement = $conn->prepare($sql);
     $statement->execute(['name' => $name]);
@@ -35,14 +35,14 @@ function createCategory ($name) {
 }
 
 function updateCategory($id, $name) {
-    require 'database.php';
+    require '../config/database.php';
     //return mysqli_query($conn, "UPDATE `categories` SET `name` = '$name' WHERE `categories`.`id` = '$id';");
     $statement = $conn->prepare("UPDATE `categories` SET name = :name WHERE categories.id = :id;");
     return $statement->execute([':name' => $name, ':id' => $id]); 
 }
 
 function deleteCategory($id) {
-    require 'database.php';
+    require '../config/database.php';
     // return mysqli_query($conn, "DELETE FROM `categories` WHERE `categories`.`id` = $id");
     $statement = $conn->prepare("DELETE FROM `categories` WHERE categories.id = :id");
     return $statement->execute(['id' => $id]); 

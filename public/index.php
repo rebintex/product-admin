@@ -114,7 +114,7 @@
             </div>
             <div class="row mt-2">
               <div class="col-12">
-                <form action="login-a.php" method="post" class="tm-login-form">
+                <form action="../controllers/login-a.php" method="post" class="tm-login-form">
                   <div class="form-group">
                     <label for="username">Username</label>
                     <input
@@ -145,7 +145,7 @@
                       class="btn btn-primary btn-block text-uppercase"
                     >
                   </div>
-                  <a class="mt-5 btn btn-primary btn-block text-uppercase" href="register.php">
+                  <a class="mt-5 btn btn-primary btn-block text-uppercase" href="../views/register.php">
                     Register
                   </a>
                 </form>

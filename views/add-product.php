@@ -3,6 +3,7 @@ session_start();
 // require 'add-category.php';
 require '../models/category-model.php';
 require '../models/product-model.php';
+require '../controllers/upload-photo.php';
 
 ?>
 
@@ -88,9 +89,10 @@ require '../models/product-model.php';
                 <h2 class="tm-block-title d-inline-block">Add Product</h2>
               </div>
             </div>
+
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="../controllers/product-controller.php" method="POST" class="tm-edit-product-form">
+                <form action="../controllers/product-controller.php" method="POST" enctype="multipart/form-data" class="tm-edit-product-form">
                   <div class="form-group mb-3">
                   <input type="text" name="method" value="store" hidden>
                     <label
@@ -140,27 +142,24 @@ require '../models/product-model.php';
                   </div>
                   
               </div>
-              <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                <div class="tm-product-img-dummy mx-auto">
-                  <i
-                    class="fas fa-cloud-upload-alt tm-upload-icon"
-                    onclick="document.getElementById('fileInput').click();"
-                  ></i>
+                <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                    <div class="tm-product-img-dummy mx-auto">
+                        <!--                  <i class="fas fa-cloud-upload-alt tm-upload-icon"></i>-->
+                        <img src="#" alt="picture">
+                    </div>
+                    <div class="custom-file mt-3 mb-3">
+
+                            <input name="image" id="fileInput" type="file" value="Choose the photo" />
+                            
+
+                    </div>
                 </div>
-                <div class="custom-file mt-3 mb-3">
-                  <input id="fileInput" type="file" style="display:none;" />
-                  <input
-                    type="button"
-                    class="btn btn-primary btn-block mx-auto"
-                    value="UPLOAD PRODUCT IMAGE"
-                    onclick="document.getElementById('fileInput').click();"
-                  />
-                </div>
-              </div>
+
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                <button type="submit" name="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
               </div>
             </form>
+
             </div>
           </div>
         </div>

@@ -1,3 +1,9 @@
+<?php
+session_start();
+unset($_SESSION['name']);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

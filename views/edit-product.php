@@ -85,7 +85,7 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="../controllers/product-controller.php" method="post" class="tm-edit-product-form">
+                <form action="../controllers/product-controller.php" enctype="multipart/form-data" method="post" class="tm-edit-product-form">
                   <div class="form-group mb-3">
                     <label
                       for="name"
@@ -142,20 +142,11 @@
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="tm-product-img-edit mx-auto">
-                  <img src="../public/img/product-image.jpg" alt="Product image" class="img-fluid d-block mx-auto">
-                  <i
-                    class="fas fa-cloud-upload-alt tm-upload-icon"
-                    onclick="document.getElementById('fileInput').click();"
-                  ></i>
+                  <img src="<?php echo "../public/uploads/" . $product['images']; ?>" alt="Product image" class="img-fluid d-block mx-auto">
+
                 </div>
                 <div class="custom-file mt-3 mb-3">
-                  <input id="fileInput" type="file" style="display:none;" />
-                  <input
-                    type="button"
-                    class="btn btn-primary btn-block mx-auto"
-                    value="CHANGE IMAGE NOW"
-                    onclick="document.getElementById('fileInput').click();"
-                  />
+                  <input id="fileInput" type="file" name="image" value="Change the photo" />
                 </div>
               </div>
               <div class="col-12">

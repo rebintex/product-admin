@@ -49,6 +49,13 @@ require '../models/product-model.php';
         >
           <i class="fas fa-bars tm-nav-icon"></i>
         </button>
+          <h2><?php
+//              if(!empty($_FILES)){
+//                  var_dump($_FILES['image']);
+//              } else {
+//                  echo "Photo is not found";
+//              }
+               ?></h2>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto h-100">
@@ -90,6 +97,7 @@ require '../models/product-model.php';
                 <thead>
                   <tr>
                     <th scope="col">PRODUCT ID</th>
+                    <th scope="col">PHOTO</th>
                     <th scope="col">PRODUCT NAME</th>
                     <th scope="col">PRICE</th>
                     <th scope="col">CATEGORY</th>
@@ -102,6 +110,8 @@ require '../models/product-model.php';
                     foreach(getAllProducts() as $product) : ?>
                   <tr>
                     <th scope="row"><?=$product['id']?></th>
+                      <td><img src="<?php echo "../public/uploads/" . $product['images'] ?? "../public/uploads/daughter.jpg"; ?>" class="img-thumbnail" alt="picture">
+                      </td>
                     <td class="tm-product-name"><?php echo $product['name']; ?></td>
                     <td><?php echo $product['price']; ?></td>
                     <td><?php echo $product['category']; ?></td>

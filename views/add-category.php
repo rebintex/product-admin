@@ -104,6 +104,7 @@
                 <button type="submit" class="btn btn-primary btn-block text-uppercase">Add</button>
               </div>
             </form>
+                  <div class="btn btn-dark mx-6"><a href="<?php echo "products.php";  ?>"></a></div>
             </div>
           </div>
         </div>

@@ -31,9 +31,15 @@ function storeP() {
         $name = $data['name'];
         $price = $data['price'];
         $category_id = $data['category_id'];
-        
-        if(createProduct($name, $price, $category_id)) {
+
+        $image = $_FILES['image']['name'];
+    //    $name = substr(md5(rand(0, 99)), 0, 7);
+        $tmp_name = $_FILES['image']['tmp_name'];
+        move_uploaded_file($tmp_name, '../public/uploads/' . $image);
+
+        if(createProduct($name, $price, $category_id, $image)) {
                 header("location: ../views/products.php");
+
                 exit();
         } else {
             header("location: ../views/products.php?message=Product is not added!");
@@ -66,12 +72,12 @@ function editP() {
 }
 
 function updateP() {
-    if (($id = $_POST['id']) && ($name = $_POST['name']) && ($price = $_POST['price']) && ($category_id = $_POST['category_id'])) {
+    if (($id = $_POST['id']) && ($name = $_POST['name']) && ($price = $_POST['price']) && ($image = $_FILES['images']) && ($category_id = $_POST['category_id'])) {
         if (!getProduct($id)) {
             header('Location: ' . '../views/products.php?message=Product does not exist.');
             exit();
         }
-        $result = updateProduct($name, $price, $category_id, $id);
+        $result = updateProduct($name, $price, $category_id, $id, $image);
         if (!$result) {
             header('Location: ' . '../views/products.php?message=Error while updating product.');
             exit();
@@ -82,3 +88,4 @@ function updateP() {
     header('Location: ' . '../views/products.php?message=Product id is not given');
     exit();
 }
+

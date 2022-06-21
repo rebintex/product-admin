@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "../config/database.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,6 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     ]);
     if($users) {
         //echo "Success in registring";
+        $_SESSION['username'] = $username;
         header("location: products.php");
     } else {
         echo "Wrong";
